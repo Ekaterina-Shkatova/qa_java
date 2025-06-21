@@ -1,3 +1,4 @@
+import com.example.Cat;
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.jupiter.api.Test;
@@ -9,7 +10,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-
 public class LionTest {
 
     @Mock
@@ -56,7 +56,7 @@ public class LionTest {
     public void getFoodTest() throws Exception {
         Lion lion = new Lion("Самец", feline);
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
-        Mockito.when(feline.getFood("Хищник")).thenReturn(expectedFood);
+        Mockito.when(feline.eatMeat()).thenReturn(expectedFood);
         List<String> actualFood = lion.getFood();
         assertEquals(expectedFood, actualFood, "Лев питается не правильно");
     }
