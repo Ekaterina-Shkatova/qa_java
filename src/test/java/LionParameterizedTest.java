@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 public class LionParameterizedTest {
 
+
     @Mock
     Feline feline;
 
